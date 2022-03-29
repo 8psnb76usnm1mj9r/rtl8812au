@@ -2250,8 +2250,8 @@ strip:
 	$(CROSS_COMPILE)strip $(MODULE_NAME).ko --strip-unneeded
 
 install:
-	install -p -m 644 $(MODULE_NAME).ko  $(MODDESTDIR)
-	/sbin/depmod -a ${KVER}
+	install -p -m 644 $(MODULE_NAME).ko  /lib/modules/5.10.103-v8+/kernel/drivers/net/wireless/
+	/sbin/depmod -a 5.10.103-v8+
 
 uninstall:
 	rm -f $(MODDESTDIR)/$(MODULE_NAME).ko
